@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "DF1E36F2-F624-4129-9D33-9DDF09A7BEB8",
+      "name" : "French language",
+      "options" : {
+        "language" : "fr"
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:YourScore.xcodeproj",
+      "identifier" : "8B699D0B275FB5FE00BF8962",
+      "name" : "YourScore"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:YourScore.xcodeproj",
+        "identifier" : "8B699D21275FB5FF00BF8962",
+        "name" : "UnitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

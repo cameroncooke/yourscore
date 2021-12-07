@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "61800C0C-78DD-4CA7-BC1C-4B55D0F7E882",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:YourScore.xcodeproj",
+        "identifier" : "8B3C6BF02784C7BE0095A8B4",
+        "name" : "SnapshotTests"
+      }
+    }
+  ],
+  "version" : 1
+}
