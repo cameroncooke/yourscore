@@ -105,4 +105,21 @@ extension Service {
             }
         }
     )
+
+    static let failThenSuccess: Service = {
+
+        var didFail: Bool = false
+
+        return Service (
+            fetch: { completion in
+
+                if didFail {
+                    return Service.stubWithDelay.fetch(completion)
+                } else {
+                    didFail.toggle()
+                    return Service.failingWithDelay.fetch(completion)
+                }
+            }
+        )
+    }()
 }
