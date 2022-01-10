@@ -143,6 +143,11 @@ We can then instantiate and inject the static configurations like so:
 let viewModel = MyViewModel(service: .live)
 let viewModel = MyViewModel(service: .stub)
 let viewModel = MyViewModel(service: .failing)
+
+viewModel.fetch { result in
+	
+	// handle ressult
+}
 ```
 
 ## Testing
