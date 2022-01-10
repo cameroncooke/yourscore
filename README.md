@@ -153,3 +153,14 @@ viewModel.fetch { result in
 ## Testing
 
 The application has a comprehensive test suite of unit and UI snapshot tests. This ensures future regressions are avoided and changes can be made with a high degree of confidence.
+
+The snapshot tests need to be executed on the same OS and environment to avoid false negatives. The snapshot tests were taken on the following configuration:
+
+- MacBook Pro M1 Pro
+- macOS 12.2
+- Xcode 13.2.1
+- iPhone 13 simulator
+
+In production, the snapshots would be generated on the CI build machine to ensure tests are reliable.
+
+See https://github.com/pointfreeco/swift-snapshot-testing for more information the limitations of snapshot testing.
