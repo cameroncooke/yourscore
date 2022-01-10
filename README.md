@@ -8,6 +8,12 @@ On opening, the app fetches a mock credit script from an external API end-point.
 
 In the case that the network operation failed the animating ring will turn red and then a final animation will happen where the ring will grow and shrink to indicate something has gone wrong to grab the user attention. A brief message and retry button will be shown to give the user the option of retrying the request.
 
+## Running the app
+
+You need at least Xcode 13 to build and run the app. This app is designed to target devices running iOS 15 and later.
+
+For best experience please run the app on a physical device. When running on the simulator there is a glitch when repeating the animation which isn't exhibited when running on physical devices.
+
 ## Points of interest
 
 - Uses MVVM-C architecture
