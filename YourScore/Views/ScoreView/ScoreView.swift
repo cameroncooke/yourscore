@@ -130,10 +130,6 @@ final class ScoreView: UIView {
             ringView.topAnchor.constraint(equalTo: topAnchor),
             ringView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-
-        if viewModel.animated {
-            ringView.addAnimation(animationStrategy: .indeterministic)
-        }
     }
 
     private func setupLabels() {
@@ -237,6 +233,11 @@ final class ScoreView: UIView {
                     self.retryButton.isHidden = true
                     self.errorTitle.isHidden  = true
                     self.ringView.setStrokeColor(.white)
+
+                    // Start initial loading animation
+                    if self.viewModel.animated {
+                        self.ringView.addAnimation(animationStrategy: .indeterministic)
+                    }
 
                 case .loaded(let viewModel):
                     try? self.labelsView.setViewModel(viewModel, animated: self.viewModel.animated)

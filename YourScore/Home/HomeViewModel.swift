@@ -39,6 +39,7 @@ final class HomeViewModel {
     private func subscribeToRetryPublisher() {
         scoreViewModel.retryPublisher
             .sink { [weak self] in
+                self?.scoreViewModel.loading()
                 self?.fetchScore()
             }
             .store(in: &cancellables)

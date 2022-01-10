@@ -68,6 +68,28 @@ final class ScoreViewViewModelTests: XCTestCase {
         cancellable.cancel()
     }
 
+    func testLoadingUpdatesStateSubject() {
+
+        let viewModel = ScoreViewViewModel()
+
+        var state: ScoreViewViewModel.State?
+
+        let cancellable = viewModel.statePublisher
+            .dropFirst() // Drop the CurrentValueSubject's initial ".loading" value
+            .sink {
+                state = $0
+            }
+
+        viewModel.loading()
+
+        XCTAssertEqual(
+            try XCTUnwrap(state),
+            .loading
+        )
+
+        cancellable.cancel()
+    }
+
     func testRetryActionPublishesToRetrySubject() {
 
         let viewModel = ScoreViewViewModel()

@@ -29,6 +29,10 @@ final class ScoreViewViewModel {
         self.animated = animated
     }
 
+    func loading() {
+        stateSubject.send(.loading)
+    }
+
     func loaded(model: Model) {
         let viewModel = ScoreLabelsViewModel(model: model)
         stateSubject.send(.loaded(model: viewModel))
